@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Navigation Menu</title>
+    <link rel="stylesheet" href="navbar.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation Menu -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full glass-nav z-50 transition-all duration-500">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <div class="logo-text text-3xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent transition-colors duration-500">
+                        <i class="fas fa-cube mr-2"></i>Nexus
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <ul class="desktop-menu hidden md:flex space-x-2">
+                    <li><a href="#home" class="nav-link px-4 py-2 text-gray-800 font-medium">Home</a></li>
+                    <li><a href="#about" class="nav-link px-4 py-2 text-gray-800 font-medium">About</a></li>
+                    <li><a href="#services" class="nav-link px-4 py-2 text-gray-800 font-medium">Services</a></li>
+                    <li><a href="#portfolio" class="nav-link px-4 py-2 text-gray-800 font-medium">Portfolio</a></li>
+                    <li><a href="#contact" class="nav-link px-4 py-2 text-gray-800 font-medium">Contact</a></li>
+                </ul>
+                
+                <!-- Mobile Hamburger -->
+                <div class="hamburger md:hidden">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <ul class="mobile-menu">
+            <li><a href="#home" class="nav-link px-6 py-3 font-medium">Home</a></li>
+            <li><a href="#about" class="nav-link px-6 py-3 font-medium">About</a></li>
+            <li><a href="#services" class="nav-link px-6 py-3 font-medium">Services</a></li>
+            <li><a href="#portfolio" class="nav-link px-6 py-3 font-medium">Portfolio</a></li>
+            <li><a href="#contact" class="nav-link px-6 py-3 font-medium">Contact</a></li>
+            <li class="mt-8">
+                <a href="#contact" class="inline-block btn-primary text-white px-8 py-3 rounded-full font-medium">
+                    Get Started
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Content Sections -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="section bg-gradient-to-br from-purple-50 to-indigo-50">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <div class="md:w-1/2 mb-12 md:mb-0">
+                        <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                            Build Your <span class="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Digital Future</span>
+                        </h1>
+                        <p class="text-lg text-gray-600 mb-8 max-w-lg">
+                            We create stunning digital experiences that drive results. Our team of experts delivers innovative solutions tailored to your business needs.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#contact" class="btn-primary text-white px-8 py-4 rounded-full font-medium">
+                                Get Started <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                            <a href="#services" class="px-8 py-4 rounded-full font-medium border-2 border-purple-600 text-purple-600 hover:bg-purple-50 transition-colors">
+                                Our Services
+                            </a>
+                        </div>
+                        <div class="mt-10 flex items-center space-x-6">
+                            <div class="flex -space-x-2">
+                                <img src="https://randomuser.me/api/portraits/women/12.jpg" class="w-10 h-10 rounded-full border-2 border-white" alt="Client">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-10 h-10 rounded-full border-2 border-white" alt="Client">
+                                <img src="https://randomuser.me/api/portraits/women/45.jpg" class="w-10 h-10 rounded-full border-2 border-white" alt="Client">
+                            </div>
+                            <div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                    <span class="font-medium text-gray-700">5.0 (200+ Reviews)</span>
+                                </div>
+                                <p class="text-sm text-gray-500">Trusted by 500+ companies</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 flex justify-center">
+                        <div class="relative floating">
+                            <img src="https://illustrations.popsy.co/amber/digital-nomad.svg" class="w-full max-w-md" alt="Digital Illustration">
+                            <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
+                            <div class="absolute -top-6 -right-6 w-32 h-32 bg-indigo-200 rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <span class="inline-block px-4 py-1 bg-purple-100 text-purple-600 rounded-full font-medium mb-4">About Us</span>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">We're More Than Just a Digital Agency</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                        We combine creativity, technology, and business acumen to deliver exceptional results for our clients.
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-10">
+                    <div class="bg-gradient-to-br from-purple-50 to-indigo-50 p-8 rounded-2xl">
+                        <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                            <i class="fas fa-lightbulb text-purple-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Innovative Approach</h3>
+                        <p class="text-gray-600">
+                            We stay ahead of the curve with cutting-edge technologies and creative solutions that set you apart from competitors.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-purple-50 to-indigo-50 p-8 rounded-2xl">
+                        <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                            <i class="fas fa-users text-purple-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Expert Team</h3>
+                        <p class="text-gray-600">
+                            Our team consists of industry veterans and young talents who bring diverse perspectives to every project.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-purple-50 to-indigo-50 p-8 rounded-2xl">
+                        <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                            <i class="fas fa-chart-line text-purple-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Proven Results</h3>
+                        <p class="text-gray-600">
+                            We measure success by the tangible impact we create for our clients, from increased revenue to enhanced brand recognition.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="mt-20 flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-10 md:mb-0">
+                        <img src="https://illustrations.popsy.co/amber/design-team.svg" class="w-full max-w-md mx-auto" alt="Team Illustration">
+                    </div>
+                    <div class="md:w-1/2 md:pl-12">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Our Story</h3>
+                        <p class="text-gray-600 mb-6">
+                            Founded in 2015, we started as a small team of passionate developers and designers. Today, we've grown into a full-service digital agency serving clients worldwide.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-600 mt-1 mr-3"></i>
+                                <p class="text-gray-600">150+ successful projects delivered</p>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-600 mt-1 mr-3"></i>
+                                <p class="text-gray-600">25+ industry awards won</p>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-600 mt-1 mr-3"></i>
+                                <p class="text-gray-600">98% client satisfaction rate</p>
+                            </div>
+                        </div>
+                        <a href="#contact" class="inline-block mt-8 btn-primary text-white px-8 py-3 rounded-full font-medium">
+                            Learn More About Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section bg-gradient-to-br from-purple-50 to-indigo-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <span class="inline-block px-4 py-1 bg-purple-100 text-purple-600 rounded-full font-medium mb-4">Our Services</span>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Solutions That Drive Success</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                        We offer comprehensive digital services tailored to your specific business needs and goals.
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="service-card p-8 rounded-2xl">
+                        <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                            <i class="fas fa-code text-purple-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Web Development</h3>
+                        <p class="text-gray-600 mb-4">
+                            Custom websites built for performance, security, and user experience using the latest technologies.
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-purple-500 mr-2 text-sm"></i>
+                                <span class="text-gray-600">Responsive Design</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-purple-500 mr-2 text-sm"></i>
+                                <span class="text-gray-600">SEO Optimized</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-purple-500 mr-2 text-sm"></i>
+                                <span class="text-gray-600">CMS Integration</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="text-purple-600 font-medium inline-flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Service Card 2 -->
+                    <div class="service-card p-8 rounded-2xl">
+                        <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                            <i class="fas fa-mobile-alt text-purple-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Mobile App Development</h3>
+                        <p class="text-gray-600 mb-4">
+                            Native and cross-platform mobile applications that engage users and deliver exceptional experiences.
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-purple-500 mr-2 text-sm"></i>
+                                <span class="text-gray-600">iOS & Android</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-purple-500 mr-2 text-sm"></i>
+                                <span class="text-gray-600">React Native</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-purple-500 mr-2 text-sm"></i>
+                                <span class="text-gray-600">Flutter</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="text-purple-600 font-medium inline-flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Service Card 3 -->
+                    <div class="service-card p-8 rounded-2xl">
+                        <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                            <i class="fas fa-search-dollar text-purple-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Digital Marketing</h3>
+                        <p class="text-gray-600 mb-4">
+                            Data-driven marketing strategies that increase visibility, engagement, and conversions.
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-purple-500 mr-2 text-sm"></i>
+                                <span class="text-gray-600">SEO & SEM</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-purple-500 mr-2 text-sm"></i>
+                                <span class="text-gray-600">Social Media</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-purple-500 mr-2 text-sm"></i>
+                                <span class="text-gray-600">Content Strategy</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="text-purple-600 font-medium inline-flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Service Card 4 -->
+                    <div class="service-card p-8 rounded-2xl">
+                        <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                            <i class="fas fa-paint-brush text-purple-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">UI/UX Design</h3>
+                        <p class="text-gray-600 mb-4">
+                            Beautiful, intuitive interfaces that enhance user satisfaction and drive business goals.
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-purple-500 mr-2 text-sm"></i>
+                                <span class="text-gray-600">User Research</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-purple-500 mr-2 text-sm"></i>
+                                <span class="text-gray-600">Wireframing</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-purple-500 mr-2 text-sm"></i>
+                                <span class="text-gray-600">Prototyping</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="text-purple-600 font-medium inline-flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Service Card 5 -->
+                    <div class="service-card p-8 rounded-2xl">
+                        <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                            <i class="fas fa-cloud text-purple-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Cloud Solutions</h3>
+                        <p class="text-gray-600 mb-4">
+                            Scalable cloud infrastructure and services to power your business growth and innovation.
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-purple-500 mr-2 text-sm"></i>
+                                <span class="text-gray-600">AWS</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-purple-500 mr-2 text-sm"></i>
+                                <span class="text-gray-600">Azure</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-purple-500 mr-2 text-sm"></i>
+                                <span class="text-gray-600">Google Cloud</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="text-purple-600 font-medium inline-flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Service Card 6 -->
+                    <div class="service-card p-8 rounded-2xl">
+                        <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                            <i class="fas fa-chart-pie text-purple-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Data Analytics</h3>
+                        <p class="text-gray-600 mb-4">
+                            Transform raw data into actionable insights that drive strategic business decisions.
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-purple-500 mr-2 text-sm"></i>
+                                <span class="text-gray-600">Business Intelligence</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-purple-500 mr-2 text-sm"></i>
+                                <span class="text-gray-600">Predictive Analytics</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-purple-500 mr-2 text-sm"></i>
+                                <span class="text-gray-600">Data Visualization</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="text-purple-600 font-medium inline-flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="section bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <span class="inline-block px-4 py-1 bg-purple-100 text-purple-600 rounded-full font-medium mb-4">Our Work</span>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Portfolio Showcase</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                        Explore some of our recent projects and see how we've helped businesses like yours succeed.
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Portfolio Item 1 -->
+                    <div class="group relative overflow-hidden rounded-xl shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" alt="Project 1">
+                        <div class="absolute inset-0 bg-gradient-to-t from-purple-900 to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <h3 class="text-white text-xl font-bold mb-2">E-commerce Platform</h3>
+                            <p class="text-purple-200 mb-4">A custom online store with advanced product filtering and checkout process.</p>
+                            <a href="#" class="text-white font-medium inline-flex items-center">
+                                View Case Study <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Portfolio Item 2 -->
+                    <div class="group relative overflow-hidden rounded-xl shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" alt="Project 2">
+                        <div class="absolute inset-0 bg-gradient-to-t from-purple-900 to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <h3 class="text-white text-xl font-bold mb-2">Mobile Banking App</h3>
+                            <p class="text-purple-200 mb-4">Secure financial application with biometric authentication and budgeting tools.</p>
+                            <a href="#" class="text-white font-medium inline-flex items-center">
+                                View Case Study <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Portfolio Item 3 -->
+                    <div class="group relative overflow-hidden rounded-xl shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" alt="Project 3">
+                        <div class="absolute inset-0 bg-gradient-to-t from-purple-900 to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <h3 class="text-white text-xl font-bold mb-2">Healthcare Portal</h3>
+                            <p class="text-purple-200 mb-4">Patient management system with telemedicine capabilities and EHR integration.</p>
+                            <a href="#" class="text-white font-medium inline-flex items-center">
+                                View Case Study <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Portfolio Item 4 -->
+                    <div class="group relative overflow-hidden rounded-xl shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" alt="Project 4">
+                        <div class="absolute inset-0 bg-gradient-to-t from-purple-900 to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <h3 class="text-white text-xl font-bold mb-2">Corporate Website</h3>
+                            <p class="text-purple-200 mb-4">Modern, responsive website with CMS integration for easy content management.</p>
+                            <a href="#" class="text-white font-medium inline-flex items-center">
+                                View Case Study <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Portfolio Item 5 -->
+                    <div class="group relative overflow-hidden rounded-xl shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" alt="Project 5">
+                        <div class="absolute inset-0 bg-gradient-to-t from-purple-900 to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <h3 class="text-white text-xl font-bold mb-2">Data Dashboard</h3>
+                            <p class="text-purple-200 mb-4">Interactive analytics platform with real-time data visualization.</p>
+                            <a href="#" class="text-white font-medium inline-flex items-center">
+                                View Case Study <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Portfolio Item 6 -->
+                    <div class="group relative overflow-hidden rounded-xl shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" alt="Project 6">
+                        <div class="absolute inset-0 bg-gradient-to-t from-purple-900 to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <h3 class="text-white text-xl font-bold mb-2">Learning Platform</h3>
+                            <p class="text-purple-200 mb-4">Online education system with course management and student progress tracking.</p>
+                            <a href="#" class="text-white font-medium inline-flex items-center">
+                                View Case Study <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <a href="#" class="inline-block px-8 py-3 border-2 border-purple-600 text-purple-600 rounded-full font-medium hover:bg-purple-50 transition-colors">
+                        View All Projects
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section bg-gradient-to-br from-purple-50 to-indigo-50">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col lg:flex-row">
+                    <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+                        <span class="inline-block px-4 py-1 bg-purple-100 text-purple-600 rounded-full font-medium mb-4">Contact Us</span>
+                        <h2 class="text-4xl font-bold text-gray-900 mb-6">Let's Build Something Amazing Together</h2>
+                        <p class="text-lg text-gray-600 mb-8">
+                            Ready to take your digital presence to the next level? Get in touch with our team to discuss your project ideas and how we can help bring them to life.
+                        </p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                             </div></div></div></div></div></div></section></main></body></html>
