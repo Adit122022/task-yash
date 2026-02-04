@@ -14,7 +14,7 @@ import {
   navigationMenuTriggerStyle,
 } from "../ui/navigation-menu";
 import { cn } from "../../lib/utils";
-import { Logo, SERVICES_DATA } from "../../lib/NavData";
+import { ADDITIONAL_LINKS, Logo, SERVICES_DATA } from "../../lib/NavData";
 
 
 const Nav = () => {
