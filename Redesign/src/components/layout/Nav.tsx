@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import {
-  Menu, X, Search, User, ChevronDown, Moon, Sun,
+  Menu, Search, User, ChevronDown, Moon, Sun,
 } from "lucide-react";
 import { Button } from "../ui/button";
-import { Sheet, SheetContent, SheetTrigger, SheetClose } from "../ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 import {
   NavigationMenu,
   NavigationMenuContent,
