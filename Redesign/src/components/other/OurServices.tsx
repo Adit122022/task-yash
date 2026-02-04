@@ -95,80 +95,6 @@ const SERVICES = [
   },
 ];
 
-const OurServices = () => {
-  const [hoveredCard, setHoveredCard] = useState<string | null>(null);
-
-  return (
-    <section className="relative py-20 md:py-32 overflow-hidden bg-background">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-violet-500/5 rounded-full blur-3xl animate-pulse delay-1000" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-blue-500/3 to-purple-500/3 rounded-full blur-3xl" />
-      </div>
-
-      <div className="container relative z-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        {/* Section Header */}
-        <div className="text-center mb-16 space-y-6">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
-            <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm font-semibold text-primary uppercase tracking-wider">
-              Our Expertise
-            </span>
-          </div>
-          
-          <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
-            <span className="bg-gradient-to-r from-foreground via-foreground/80 to-foreground bg-clip-text text-transparent">
-              Our Services
-            </span>
-          </h2>
-          
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            We offer comprehensive IT solutions tailored to meet your business needs and drive 
-            digital transformation.
-          </p>
-        </div>
-
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {SERVICES.map((service) => (
-            <ServiceCard
-              key={service.id}
-              service={service}
-              isHovered={hoveredCard === service.id}
-              onHover={() => setHoveredCard(service.id)}
-              onLeave={() => setHoveredCard(null)}
-            />
-          ))}
-        </div>
-
-        {/* Call to Action */}
-        <div className="mt-20 text-center">
-          <div className="inline-flex flex-col sm:flex-row items-center gap-4">
-            <Button 
-              size="lg" 
-              className="rounded-full px-8 font-semibold shadow-lg hover:shadow-xl transition-all group"
-            >
-              View All Services
-              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline"
-              className="rounded-full px-8 font-semibold"
-            >
-              Schedule Consultation
-            </Button>
-          </div>
-        </div>
-      </div>
-
-      {/* Decorative Grid Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:64px_64px] pointer-events-none" />
-    </section>
-  );
-};
-
 /**
  * Individual Service Card Component
  */
@@ -179,7 +105,7 @@ interface ServiceCardProps {
   onLeave: () => void;
 }
 
-const ServiceCard = ({ service, isHovered, onHover, onLeave }: ServiceCardProps) => {
+const ServiceCard = ({ service, onHover, onLeave }: ServiceCardProps) => {
   const Icon = service.icon;
 
   return (
@@ -252,6 +178,80 @@ const ServiceCard = ({ service, isHovered, onHover, onLeave }: ServiceCardProps)
       {/* Corner Accent */}
       <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-primary/20 to-transparent rounded-bl-[3rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
     </Card>
+  );
+};
+
+const OurServices = () => {
+  const [hoveredCard, setHoveredCard] = useState<string | null>(null);
+
+  return (
+    <section className="relative py-20 md:py-32 overflow-hidden bg-background">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-violet-500/5 rounded-full blur-3xl animate-pulse delay-1000" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-blue-500/3 to-purple-500/3 rounded-full blur-3xl" />
+      </div>
+
+      <div className="container relative z-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        {/* Section Header */}
+        <div className="text-center mb-16 space-y-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
+            <Sparkles className="w-4 h-4 text-primary" />
+            <span className="text-sm font-semibold text-primary uppercase tracking-wider">
+              Our Expertise
+            </span>
+          </div>
+          
+          <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
+            <span className="bg-gradient-to-r from-foreground via-foreground/80 to-foreground bg-clip-text text-transparent">
+              Our Services
+            </span>
+          </h2>
+          
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            We offer comprehensive IT solutions tailored to meet your business needs and drive 
+            digital transformation.
+          </p>
+        </div>
+
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {SERVICES.map((service) => (
+            <ServiceCard
+              key={service.id}
+              service={service}
+              isHovered={hoveredCard === service.id}
+              onHover={() => setHoveredCard(service.id)}
+              onLeave={() => setHoveredCard(null)}
+            />
+          ))}
+        </div>
+
+        {/* Call to Action */}
+        <div className="mt-20 text-center">
+          <div className="inline-flex flex-col sm:flex-row items-center gap-4">
+            <Button 
+              size="lg" 
+              className="rounded-full px-8 font-semibold shadow-lg hover:shadow-xl transition-all group"
+            >
+              View All Services
+              <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline"
+              className="rounded-full px-8 font-semibold"
+            >
+              Schedule Consultation
+            </Button>
+          </div>
+        </div>
+      </div>
+
+      {/* Decorative Grid Pattern */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:64px_64px] pointer-events-none" />
+    </section>
   );
 };
 
